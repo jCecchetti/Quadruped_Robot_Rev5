@@ -34,7 +34,11 @@ bool Leg::setFootPos(Position pos){
 
 bool Leg::calculateAngles(double x, double y, double z){
 
-	if(!left) y = -y;
+	hipAngle = atan2(x,z);
+
+	ltotal = sqrt((sqrt(x*x + z*z)))
+
+/*	if(!left) y = -y;
 
 	double C = pow(z*z + y*y, 0.5);
 
@@ -55,7 +59,7 @@ bool Leg::calculateAngles(double x, double y, double z){
 
 	hipAngle *= 57.2958;
 	kneeAngle *= 57.2958;
-	ankleAngle *= 57.2958;
+	ankleAngle *= 57.2958;*/
 
 	//std::cout << hipAngle << std::endl;
 	//std::cout << kneeAngle << std::endl;
